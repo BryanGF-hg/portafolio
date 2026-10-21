@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Portafolio - BryanGF-hg</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="https://raw.githubusercontent.com/BryanGF-hg/Dir-Imagenes/refs/heads/main/Grems/grem-principal.png">
+  <style>
+html {padding: 0;background:linear-gradient(to right, #1b4332, #e9f5db);font-family: Ubuntu;}
+body {margin: 0;}
+
+header{display:flex;}
+#header-enlaces{flex:1;}
+#header-enlaces ul{display:flex;justify-content:center;gap:20px;padding:35px;list-style:none;font-size:x-large;}
+#header-texto{flex:4;}
+
+
+h1,h2 {padding-left: 20px;color:#ffffff;}
+a {color: #1b4332;text-decoration: none;font-weight:bold;text-decoration:none;}
+
+#par{display:flex;width:1620px;}
+/* Contenedor principal del carrusel */
+.principal {position: relative;max-width: 800px;margin: -20px auto;overflow: hidden;background: #e9f5db;border-radius: 10px;}
+#preview{display:flex;flex:1;}
+/* Cada slide/proyecto */
+.section{min-width: 100%;          /* MUY IMPORTANTE para el carrusel: cada slide ocupa todo el ancho */
+    box-sizing: border-box;padding: 20px;text-align: center;transition: transform 0.3s;    
+    /* Colocamos contenido en columna: imagen arriba, descripción debajo */
+    display: flex;flex-direction: column;align-items: center;}
+
+/* Quita floats antiguos que molestan */
+.section img {height: 200px;width: auto;margin-bottom: 10px;}
+/* Descripción debajo de la imagen */
+.section .description {    max-width: 600px;    padding:15px;}
+/* Animacion Basica*/
+.section:hover img {    transform: scale(1.03);}
+
+/* Botones del carrusel */
+button{border:0;background:rgba(255,255,255,.75);width:60px;height:60px;position:absolute;top:50%;transform:translateY(-50%);border-radius:50%;font-size:30px;line-height:60px;text-align:center;cursor:pointer;}button:hover{background:#fff;}
+button:hover {background:rgba(255,255,255,1);}
+/* Botón atras y delante del carrusel */
+.boton-atras {    left: 10px;}
+.boton-delante {    right: 10px;}
+
+/*Footer */
+@keyframes barrido{to{left:100%} }
+footer{text-align:center;padding:4px;margin-top:80px;position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:barrido 3s infinite}
+
+
+/* Animacion Basica*/
+.section:hover img {    transform: scale(1.03);}  
+  </style>
+ </head>
+ <body>
+   <header>
+     <div id="header-texto">
+     <h1>Bryan Alexander Glot Fong - Portafolio</h1>
+     <h2>Estudiante en CEAC FP</h2>     
+     </div>
+     <div id="header-enlaces">
+	     <ul>
+	      <li><a href="#centro-topping">Inicio</a></li>
+	      <li><a href="https://bryangf-hg.github.io/portafolio/">Portafolio</a></li>
+	      <li><a href=https://bryangf-hg.github.io/web/>Web</a></li>
+	      <li><a href="https://www.linkedin.com/in/bryan-glot-fong-04082a39a/">Linkedin</a></li>	      
+	    </ul>
+	   </div>
+   </header>
+   <div id="par">
+    <section id="preview">
+
+        <div class="preview">
+            <a href="https://github.com/BryanGF-hg/AutoCYP"><img src="https://raw.githubusercontent.com/BryanGF-hg/Dir-Imagenes/refs/heads/main/Proyectos/AutoCYP/autocyp-preview.png" width="193px" height="200px"></a>
+            <div class="preview description">
+                <h2><a href="https://github.com/BryanGF-hg/AutoCYP">AutoCYP</a></h2>
+                <p>
+                    Una herramienta hecha con Python que sirve para hacer estructuras predifinidas <br>
+                    con 4 puntos principales(Introduccion,Desarrollo,Aplicacion,Conclusion)
+                </p>
+            </div>    
+    </section>
+    
+    <section class="principal" id="particulas">     <!-- INICIO del section (principal)-->    
+        <div class="section first">
+            <a href="https://github.com/BryanGF-hg/AutoCYP"><img src="https://raw.githubusercontent.com/BryanGF-hg/Dir-Imagenes/refs/heads/main/Proyectos/AutoCYP/autocyp-preview.png" width="193px" height="200px"></a>
+            <div class="description">
+                <h2><a href="https://github.com/BryanGF-hg/AutoCYP">AutoCYP</a></h2>
+                <p>
+                    Una herramienta hecha con Python que sirve para hacer estructuras predifinidas <br>
+                    con 4 puntos principales(Introduccion,Desarrollo,Aplicacion,Conclusion)
+                </p>
+            </div>
+            <a href="https://github.com/BryanGF-hg/AutoCYP"><img src="https://raw.githubusercontent.com/BryanGF-hg/Dir-Imagenes/refs/heads/main/Proyectos/AutoCYP/autocyp-preview.png" width="193px" height="200px"></a>                        
+        </div>   <!-- Fin del div section first (div secundario)-->    
+   
+        <div class="section right">
+            <a href="https://github.com/BryanGF-hg/WePlan"><img src="https://raw.githubusercontent.com/BryanGF-hg/Dir-Imagenes/refs/heads/main/Proyectos/WePlan/pagina%20de%20inicio%20front-end%201.png" width="368px" height="200px"></a>
+            <div class="description">
+                <h2><a href="https://github.com/BryanGF-hg/WePlan">WePlan</a></h2>
+                <p>
+                    El proyecto a pequeña escala de dos personas (Ayman Mouzakki y Bryan Glot Fong) desarrollado para recrear las Fases de Desarrollo de Aplicación durante el segundo trimestre
+                </p>
+            </div>
+            <a href="https://github.com/BryanGF-hg/WePlan"><img src="https://raw.githubusercontent.com/BryanGF-hg/Dir-Imagenes/refs/heads/main/Proyectos/WePlan/pagina%20de%20actividades%20front-end.png" width="368px" height="200px"></a>            
+        </div>   <!-- Fin del div section (div secundario)-->    
+
+        <div class="section left">
+            <a href="https://github.com/BryanGF-hg/Proyecto-FloMViDex"><img src="https://raw.githubusercontent.com/BryanGF-hg/Proyecto-FloMViDex/refs/heads/main/media/Images/paginas/landing-page.png" width="368px" height="200px"></a>
+            <div class="description">
+                <h2><a href="https://github.com/BryanGF-hg/Proyecto-FloVViDex">FloMViDex</a></h2>
+                <p>
+                    Reproductor Musical web del genero Maidcore desarrollado en el tercer trimestre usando las tecnologias conocidas al momento
+                </p>
+            </div>
+            <a href="https://github.com/BryanGF-hg/Proyecto-FloMViDex"><img src="https://raw.githubusercontent.com/BryanGF-hg/Proyecto-FloMViDex/refs/heads/main/media/Images/front-end/Frontend%20FLOMVIDEX.png" width="368px" height="200px"></a>            
+        </div>   <!-- Fin del div section  (div secundario)-->    
+        
+        <div class="section right">
+            <a href="https://github.com/BryanGF-hg/phosfytte-copilot"><img src="https://raw.githubusercontent.com/BryanGF-hg/Dir-Imagenes/refs/heads/main/Proyectos/AutoCYP/autocyp-preview.png" width="368px" height="200px"></a>
+            <div class="description">
+                <h2><a href="https://github.com/BryanGF-hg/phosfytte-copilot">Phosfytte</a></h2>
+                <p>
+                    Herramienta hecha con IA usando los modelos whisper y ollama para hacer transcipciones (y resumenes) de videos de youtube. Puede usar el AppImage
+                </p>
+            </div>
+        </div>   <!-- Fin del div section  (div secundario)--> 
+
+        <div class="section left">
+            <a href="https://github.com/BryanGF-hg/WePlan"><img src="https://raw.githubusercontent.com/BryanGF-hg/Dir-Imagenes/refs/heads/main/Proyectos/AutoCYP/autocyp-preview.png" width="368px" height="200px"></a>
+            <div class="description">
+                <h2><a href="https://github.com/BryanGF-hg/AutoCYP">Proyecto a Añadir</a></h2>
+                <p>
+                    Una herramienta, producto o script a hacer que ayudará aunque sea un poquito
+                </p>
+            </div>
+        </div>   <!-- Fin del div section  (div secundario)--> 
+
+        </div>                
+        
+     </section> <!-- Fin del section (principal)-->    
+    </div> <!-- fin del div par-->
+    <footer>
+        <p>@2026 Bryan Alexander Glot Fong</p>
+    </footer>
+   <script>
+// Constantes
+const principal = document.querySelector(".principal");
+const slides = Array.from(principal.querySelectorAll(".section"));
+
+// track/tira del carrusel crea divs, les da estilo, pasamos los slides a la tira, ahora se le añade esta modificación/tira al section .principal
+const track = document.createElement("div");
+track.style.display = "flex";
+track.style.transition = "transform 0.3s ease";
+slides.forEach(slide => track.appendChild(slide));
+principal.appendChild(track);
+
+// Botones: Se crean, se le dan texto y una clase, y se le añade a section .principal
+const btnPrev = document.createElement("button");
+btnPrev.textContent = "◀";
+btnPrev.classList.add("boton-atras");
+const btnNext = document.createElement("button");
+btnNext.textContent = "▶";
+btnNext.classList.add("boton-delante");
+principal.appendChild(btnPrev);
+principal.appendChild(btnNext);
+
+// Creamos una constante y una funcion donde muestra el ancho visible y lo transforma dependiendo de la pantalla (diseño responsive) 
+// para el boton next: avanza hasta que alcanza el maximo del slides.length y vuelve al inicio
+// para el boton prev: retrocede hasta que alcanza el minimo del slides.length y va al último
+let index = 0;
+function actualizar() {
+  const width = principal.clientWidth;track.style.transform = `translateX(${-index * width}px)`;
+}
+btnNext.onclick = () => {  index = (index + 1) % slides.length;                  actualizar();              };
+btnPrev.onclick = () => {  index = (index - 1 + slides.length) % slides.length;  actualizar();              };
+
+window.addEventListener("resize", actualizar);
+actualizar();   
+   </script>
+ </body>
+</html>
