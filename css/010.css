@@ -1,0 +1,200 @@
+/* =========================================================
+   Portafolio — paleta del currículum
+   Menta · Neutros · Verde té · Naranja suave
+   ========================================================= */
+:root {
+  --menta: #A9E3CF;
+  --menta-tenue: #DDF5EB;
+  --verde-te: #14594A;
+  --naranja: #F9AB72;
+  --naranja-claro: #FBC49C;
+  --amanecer: #F2C14E;
+
+  --tinta: #12302A;
+  --tinta-naranja: #2B1D15;
+  --muted: #4A675F;
+  --fondo: #EAF6F0;
+  --superficie: #FFFFFF;
+  --borde: #CFE3DA;
+
+  --radio: 16px;
+  --gutter: clamp(12px, 2.2vw, 32px);
+  --sombra: 0 6px 20px rgba(18, 48, 42, 0.08);
+  --f-titulos: 'Poppins', system-ui, sans-serif;
+  --f-texto: 'Nunito Sans', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--fondo);
+  scroll-behavior: smooth;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--tinta);
+  font: 400 16px/1.6 var(--f-texto);
+}
+
+:focus-visible { outline: 3px solid var(--verde-te); outline-offset: 2px; }
+
+/* ---------- Cabecera ---------- */
+header {
+  padding: clamp(22px, 4vw, 40px) var(--gutter);
+  background: var(--menta-tenue);
+  border-bottom: 1px solid var(--borde);
+}
+
+#header-texto { width: min(100%, 860px); margin-inline: auto; }
+
+#header-texto h1 {
+  margin: 0;
+  color: var(--tinta);
+  font: 700 clamp(1.7rem, 4vw, 2.4rem)/1.15 var(--f-titulos);
+}
+
+#header-texto h2 {
+  margin: 8px 0 0;
+  color: var(--verde-te);
+  font: 700 1rem/1.4 var(--f-texto);
+}
+
+#header-texto h2::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin-top: 8px;
+  background: var(--naranja);
+}
+
+/* ---------- Carrusel ----------
+   004.js mete los .section en una tira (flex) y la desplaza con translateX.
+   .principal NO lleva padding: la tira mide justo lo que mide su clientWidth. */
+.principal {
+  position: relative;
+  width: min(calc(100% - 2 * var(--gutter)), 860px);
+  margin: clamp(24px, 4vw, 44px) auto 56px;
+  overflow: hidden;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.section {
+  flex: 0 0 100%;
+  min-width: 100%; /* clave del carrusel: cada diapositiva ocupa todo el ancho */
+  padding: 28px 76px 32px; /* hueco lateral para los botones */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+  align-content: center;
+  text-align: center;
+}
+
+/* Dos capturas arriba, descripción debajo */
+.section > a {
+  display: block;
+  overflow: hidden;
+  align-self: center;
+  background: var(--menta-tenue);
+  border-radius: 12px;
+}
+
+.section > a:only-of-type { grid-column: 1 / -1; justify-self: center; width: min(100%, 420px); }
+
+.section img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.section > a:hover img { transform: scale(1.03); }
+
+.section .description {
+  grid-column: 1 / -1;
+  order: 3;
+  max-width: 60ch;
+  margin: 6px auto 0;
+}
+
+.description h2 { margin: 0 0 6px; font: 700 1.3rem/1.25 var(--f-titulos); }
+
+.description h2 a {
+  color: var(--verde-te);
+  text-decoration-color: var(--naranja);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.description p { margin: 0; color: var(--muted); }
+
+/* Botones del carrusel (los crea 004.js) */
+.principal button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  color: var(--verde-te);
+  font-size: 18px;
+  line-height: 1;
+  background: var(--menta);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.principal button:hover { background: var(--naranja); color: var(--tinta-naranja); }
+
+.boton-atras { left: 14px; }
+.boton-delante { right: 14px; }
+
+/* ---------- Pie ---------- */
+@keyframes barrido { to { left: 100%; } }
+
+footer {
+  position: relative;
+  margin-top: auto;
+  padding: 18px;
+  overflow: hidden;
+  text-align: center;
+  background: var(--menta);
+}
+
+footer p { margin: 0; font-weight: 700; }
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  animation: barrido 4s linear infinite;
+}
+
+/* ---------- Móvil: una columna y botones abajo ---------- */
+@media (max-width: 640px) {
+  .section { grid-template-columns: 1fr; padding: 20px 18px 84px; }
+  .section img { height: 170px; }
+  .principal button { top: auto; bottom: 18px; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+  footer::before { animation: none; }
+}

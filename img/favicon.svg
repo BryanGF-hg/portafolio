@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="17 23 270 270">
+  <title>Logotipo geométrico de triángulos</title>
+  <path d="M85 39 L23 275 L145 188" fill="none" stroke="#F2C14E" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M139 63 L27 259 L252 259 Z" fill="#008D78" stroke="#008D78" stroke-width="1" stroke-linejoin="round"/>
+  <path d="M199 101 L282 253 L117 253 Z" fill="#A8E6CF" stroke="#A8E6CF" stroke-width="1" stroke-linejoin="round"/>
+  <path d="M145 140 L77 277 L225 277 Z" fill="#FF8A3D" stroke="#FFFDF7" stroke-width="4" stroke-linejoin="round"/>
+</svg>
