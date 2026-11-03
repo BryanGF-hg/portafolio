@@ -11,7 +11,7 @@
     { label: 'Currículum', href: '../curriculum/index.html' },
     { label: 'GitHub', href: 'https://github.com/BryanGF-hg' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/bryan-glot-fong-04082a39a/' },
-    { label: 'Descargar CV', href: 'https://drive.google.com/file/d/14Se06f0c0uohh1LpYelg_1c0K56uGte-/view?usp=sharing', id: 'enlace_de_descarga', primary: true },
+    { label: 'Descargar CV', href: 'https://drive.google.com/file/d/1sDiyTO3K8WhCrhiZ3d7QIPm8FFA3a3oF/view?usp=sharing', id: 'enlace_de_descarga', primary: true },
   ];
 
   // Paleta del currículum: menta #A9E3CF, menta tenue #DDF5EB, verde té #14594A, naranja suave #F9AB72
