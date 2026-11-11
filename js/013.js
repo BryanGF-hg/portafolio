@@ -5,6 +5,7 @@ import gsap from 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js';
 /* =========================================================
    DATOS
    ========================================================= */
+document.documentElement.classList.add('js');
 const projects = [
   { title: "AutoCYP",   tags: ["Python","CLI"],          desc: "Herramienta en Python que genera estructuras predefinidas con cuatro puntos: introducción, desarrollo, aplicación y conclusión.", url: "https://github.com/BryanGF-hg/AutoCYP", image: "https://raw.githubusercontent.com/BryanGF-hg/Dir-Imagenes/refs/heads/main/Proyectos/AutoCYP/autocyp-preview.png" },
   { title: "WePlan",    tags: ["Web","Colaborativo"],    desc: "Proyecto en equipo con Ayman Mouzakki para recrear las fases del desarrollo de aplicaciones: conexión social de grupos locales con planificación de actividades.", url: "https://github.com/BryanGF-hg/WePlan", image: "https://raw.githubusercontent.com/BryanGF-hg/Dir-Imagenes/refs/heads/main/Proyectos/WePlan/pagina%20de%20inicio%20front-end%201.png" },

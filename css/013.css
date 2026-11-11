@@ -5,7 +5,7 @@
 @font-face {
   font-family: 'Victor Mono';
   /* Asegúrate de que el nombre del archivo coincida exactamente */
-  src: url('../VictorMono.ttf') format('truetype'); 
+  src: url('VictorMono.ttf') format('truetype'); 
   /* Si tienes .woff2 (recomendado, pesa menos), usa esto en su lugar:
   src: url('../VictorMono.woff2') format('woff2'); */
   font-weight: 100 700;
@@ -128,12 +128,18 @@ kbd {
 /* ---------- Reveal ---------- */
 
 .reveal {
+  opacity: 1;
+  transform: none;
+  transition: opacity .7s cubic-bezier(.2,.7,.2,1),
+              transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+html.js .reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
-  will-change: opacity, transform;
 }
-.reveal.is-visible {
+
+html.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
