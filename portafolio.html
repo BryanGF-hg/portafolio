@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Bryan Glot Fong · Desarrollo de aplicaciones multiplataforma</title>
+  
+  <!-- SEO / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portafolio 3D · Bryan Glot Fong">
+  <meta property="og:description" content="Una selección de proyectos, habilidades y trabajos realizados.">
+  <meta property="og:image" content="https://bryangf-hg.github.io/web/media/ImagenFormaldeBryanGlotFong.jpg">
+  <meta property="og:url" content="https://bryangf-hg.github.io/portafolio/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portafolio 3D · Bryan Glot Fong">
+  <meta name="twitter:description" content="Una selección de proyectos, habilidades y trabajos realizados.">
+  <meta name="twitter:image" content="https://bryangf-hg.github.io/web/media/ImagenFormaldeBryanGlotFong.jpg">
+
+  <link rel="stylesheet" href="css/013.css">
+  <script src="nav-modular.js" defer></script>
+  
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>  
+</head>
+<body>
+  <site-nav></site-nav>
+
+  <!-- 01 · HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-watermark" aria-hidden="true">GLOT FONG</div>
+    <div class="hero-inner">
+
+      <div class="hero-pill reveal">
+        <span class="pill-dot" aria-hidden="true"></span>
+        <span>DAM 2º · CEAC FP · Valencia</span>
+      </div>
+
+      <h1 class="hero-title reveal">
+        Bryan Glot Fong
+        <span class="hero-role">Estudiante de Desarrollo de aplicaciones multiplataforma</span>
+      </h1>
+
+      <p class="hero-desc reveal">
+        Construyo herramientas, apps y sitios que resuelven problemas concretos.
+        Aprendiendo en abierto, un edit a la vez.
+      </p>
+
+      <ul class="hero-tools reveal" aria-label="Tecnologías principales">
+        <li>React</li>
+        <li>Typescript</li>
+        <li>Node</li>
+        <li>Python</li>
+        <li>MySQL</li>
+        <li>C++</li>
+      </ul>
+
+      <div class="hero-stats reveal">
+        <div class="hero-stat"><b data-count="6">0</b><span>proyectos publicados</span></div>
+        <div class="hero-stat"><b data-count="15" data-suffix="+">0</b><span>repositorios</span></div>
+        <div class="hero-stat"><b data-count="2">0</b><span>años de código</span></div>
+      </div>
+
+      <div class="hero-actions reveal">
+        <a href="#proyectos" class="btn btn-primary">Ver proyectos <span aria-hidden="true">→</span></a>
+        <a href="../curriculum/index.html" class="btn btn-ghost">Descargar CV</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>scroll</span>
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+  <hr aria-hidden="true" class="divider">
+
+  <!-- 02 · PROYECTOS · CARRUSEL 3D -->
+  <section class="projects" id="proyectos">
+    <header class="section-head">
+      <h2>Proyecto<span class="texto-naranja">.</span></h2>
+      <p class="section-lead">Cada proyecto real con su repositorio público. Usa <kbd>←</kbd> <kbd>→</kbd> para navegar.</p>
+    </header>
+
+    <div class="carousel-wrapper" id="carouselWrapper">
+      <div class="carousel-stage" id="carouselStage">
+        <canvas id="webgl-canvas"></canvas>
+        <div id="css3d-container"></div>
+
+        <div class="carousel-controls">
+          <button class="nav-btn" id="btnPrev" type="button" aria-label="Proyecto anterior">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="carousel-dots" id="dots"></div>
+          <button class="nav-btn" id="btnNext" type="button" aria-label="Siguiente proyecto">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="project-panel">
+        <div class="panel-inner" id="panelInner">
+          <div class="panel-meta">
+            <span class="panel-counter" id="panelCounter">01 / 06</span>
+            <span class="panel-sep">·</span>
+            <div class="panel-tags" id="panelTags"></div>
+          </div>
+          <div class="panel-title-row">
+            <h2 class="panel-title" id="panelTitle"></h2>
+            <a class="panel-link" id="panelLink" href="#" rel="noopener">Ver repositorio <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="panel-desc" id="panelDesc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr aria-hidden="true" class="divider">
+
+  <!-- 03 · STACK -->
+  <section class="stack" id="stack">
+    <header class="section-head reveal">
+      <p class="eyebrow">// STACK</p>
+      <h2>Herramientas que uso</h2>
+      <p class="section-lead">Agrupadas por área. Cada grupo lleva su tiempo real de uso.</p>
+    </header>
+
+    <div class="stack-grid">
+      <article class="stack-card reveal">
+        <h3>Front-end</h3>
+        <ul class="stack-list">
+          <li><span>React</span><b>2 años</b></li>
+          <li><span>TypeScript</span><b>1 año</b></li>
+          <li><span>HTML5 / CSS3</span><b>2 años</b></li>
+        </ul>
+        <pre class="stack-cmd"><code><span class="t-prompt">$</span> npm run dev
+VITE ready in 412 ms</code></pre>
+      </article>
+
+      <article class="stack-card reveal">
+        <h3>Back-end</h3>
+        <ul class="stack-list">
+          <li><span>Node + Express</span><b>6 meses</b></li>
+          <li><span>FastAPI</span><b>1 año</b></li>
+          <li><span>Python</span><b>2 años</b></li>
+        </ul>
+        <pre class="stack-cmd"><code><span class="t-prompt">$</span> node server.js
+listening on :3000</code></pre>
+      </article>
+
+      <article class="stack-card reveal">
+        <h3>Datos</h3>
+        <ul class="stack-list">
+          <li><span>MySQL</span><b>2 años</b></li>
+          <li><span>MongoDB</span><b>9 meses</b></li>
+          <li><span>SQLite</span><b>1 año</b></li>
+        </ul>
+        <pre class="stack-cmd"><code><span class="t-prompt">$</span> mysql -u root -p
+Welcome to the MySQL</code></pre>
+      </article>
+
+      <article class="stack-card reveal">
+        <h3>Infraestructura</h3>
+        <ul class="stack-list">
+          <li><span>Git / GitHub</span><b>2 años</b></li>
+          <li><span>Linux</span><b>2 años</b></li>
+          <li><span>Vercel</span><b>6 meses</b></li>
+        </ul>
+        <pre class="stack-cmd"><code><span class="t-prompt">$</span> git log --oneline -1
+a1b2c3d feat: portafolio 3D</code></pre>
+      </article>
+    </div>
+  </section>
+
+  <hr aria-hidden="true" class="divider">
+
+  <!-- 04 · CONTACTO -->
+  <section class="contact" id="contacto">
+    <header class="section-head reveal">
+      <p class="eyebrow">// CONTACTO</p>
+      <h2>Hablemos<span class="texto-naranja">.</span></h2>
+      <p class="section-lead">Copia un canal y escríbeme. Respondo en menos de 48 h.</p>
+    </header>
+
+    <div class="contact-grid">
+      <div class="copy-card reveal">
+        <span class="copy-label">Correo</span>
+        <div class="copy-row">
+          <code>bryanglot@gmail.com</code>
+          <button class="copy-btn" type="button" data-copy="bryanglot@gmail.com">COPIAR</button>
+        </div>
+      </div>
+
+      <div class="copy-card reveal">
+        <span class="copy-label">Correo académico</span>
+        <div class="copy-row">
+          <code>bryan.alexander.glot.fong@alu.ceacfp.es</code>
+          <button class="copy-btn" type="button" data-copy="bryan.alexander.glot.fong@alu.ceacfp.es">COPIAR</button>
+        </div>
+      </div>
+
+      <a class="copy-card link-card reveal" href="https://github.com/BryanGF-hg" target="_blank" rel="noopener">
+        <span class="copy-label">GitHub</span>
+        <div class="copy-row">
+          <code>github.com/BryanGF-hg</code>
+          <span class="copy-btn">ABRIR <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+
+      <a class="copy-card link-card reveal" href="https://www.linkedin.com/in/bryan-glot-fong-04082a39a/" target="_blank" rel="noopener">
+        <span class="copy-label">LinkedIn</span>
+        <div class="copy-row">
+          <code>linkedin.com/in/bryan-glot-fong</code>
+          <span class="copy-btn">ABRIR <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+    </div>
+
+    <div class="terminal reveal">
+      <div class="terminal-bar">
+        <span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="terminal-title">bryan@portfolio:~</span>
+      </div>
+      <pre class="terminal-body"><code><span class="t-prompt">$</span> git status
+On branch <span class="t-accent">main</span>
+Your branch is up to date with <span class="t-accent">'origin/main'</span>.
+nothing to commit, working tree clean
+
+<span class="t-prompt">$</span> echo "¿Hablamos?"
+¿Hablamos?<span class="cursor">█</span></code></pre>
+    </div>
+  </section>
+
+  <!-- 05 · FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-watermark" aria-hidden="true">GLOT FONG</div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Bryan Alexander Glot Fong</strong>
+        <span>Desarrollo de aplicaciones multiplataforma</span>
+      </div>
+      <nav class="footer-links" aria-label="Navegación">
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#stack">Stack</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-meta">
+        <span>Valencia · 2026</span>
+        <a href="../web/index.html">Sitio personal</a>
+        <a href="../curriculum/index.html">Currículum</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/013.js"></script>
+</body>
+</html>
